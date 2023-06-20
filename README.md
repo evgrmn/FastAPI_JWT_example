@@ -1,5 +1,51 @@
 # JWT authentication example for FastAPI with Pytest testing
 
+## What is inside
+
+- REST service for viewing the current salary of company employees
+
+- The database of company employees is located in the text file app/database/fake_users_db.json
+
+- Viewing information from the database is possible with a password
+
+- JSON Web Token (JWT) authentication technology
+
+- Using the dependency manager Poetry
+
+- Running a service in an isolated Docker container
+
+- Pytest Autotests
+
+- The code is based on the official FastAPI documentation [OAuth2 with Password (and hashing), Bearer with JWT tokens](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
+
+## Implementation
+
+- The API has three endpoints:
+     - /api/v1/auth/token - generates a token for an employee when logging in with a password
+     - /api/v1/all - view a list of all employees
+     - /api/v1/me - view salary and date of increase by an employee by password
+
+- .env file stores token lifetime in milliseconds and JWT secret key
+
+- main.py - start the API. (local launch *uvicorn main:app --reload*)
+
+- [ ] pyproject.toml - Poetry dependency file
+
+- [ ] API files are in app folder
+     - config - load environment variables
+     - control - business logic functions
+     - database - load database file
+     - endpoints - calling API services
+     - schemas - Pydentic models for variable validation
+
+- [ ] Logins and passwords:
+     - Michael michaelsecret
+     - Emily emilysecret
+
+
+
+
+
 REST-сервис просмотра текущей зарплаты сотрудников и даты следующего повышения. Сотрудники могут пользоваться сервисом только с помощью своего логина и пароля. Сервис информирует сотрудников об их зарплате и дате следующего повышения зарплаты. Для реализации сервиса должен быть использован FastAPI.
 
 ### Ключевые особенности
