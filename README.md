@@ -2,32 +2,32 @@
 
 ## What is inside
 
-- REST service for viewing the current salary of company employees
+- [ ] REST service for viewing the current salary of company employees
 
-- The database of company employees is located in the text file app/database/fake_users_db.json
+- [ ] The database of company employees is located in the text file app/database/fake_users_db.json
 
-- Viewing information from the database is possible with a password
+- [ ] Viewing information from the database is possible with a password
 
-- JSON Web Token (JWT) authentication technology
+- [ ] JSON Web Token (JWT) authentication technology
 
-- Using the dependency manager Poetry
+- [ ] Using the dependency manager Poetry
 
-- Running a service in an isolated Docker container
+- [ ] Running a service in an isolated Docker container
 
-- Pytest Autotests
+- [ ] Pytest Autotests
 
-- The code is based on the official FastAPI documentation [OAuth2 with Password (and hashing), Bearer with JWT tokens](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
+- [ ] The code is based on the official FastAPI documentation [OAuth2 with Password (and hashing), Bearer with JWT tokens](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
 
 ## Implementation
 
-- The API has three endpoints:
+- [ ] The API has three endpoints:
      - /api/v1/auth/token - generates a token for an employee when logging in with a password
      - /api/v1/all - view a list of all employees
      - /api/v1/me - view salary and date of increase by an employee by password
 
-- .env file stores token lifetime in milliseconds and JWT secret key
+- [ ] .env file stores token lifetime in milliseconds and JWT secret key
 
-- main.py - start the API. (local launch *uvicorn main:app --reload*)
+- [ ] main.py - start the API. (local launch *uvicorn main:app --reload*)
 
 - [ ] pyproject.toml - Poetry dependency file
 
