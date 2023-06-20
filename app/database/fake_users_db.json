@@ -1,0 +1,18 @@
+{
+    "Ivan": {
+        "username": "Ivan",
+        "full_name": "Иван Петров",
+        "email": "ivan@example.com",
+        "hashed_password": "$2b$12$Ho3vvFeR8ET/7W.cirjdUO2/13O4grByZ5ZFLwbyMlnoZdn1FUaVS",
+        "salary": "100000",
+        "salary_rise_date": "Ноябрь 2023"
+    },
+    "Elena": {
+        "username": "Elena",
+        "full_name": "Елена Иванова",
+        "email": "elena@example.com",
+        "hashed_password": "$2b$12$2ofkSOWck.r.HS063lbNteU7gbEbsmvfmDX1723bekrXVnJUJrXHW",
+        "salary": "120000",
+        "salary_rise_date": "Октябрь 2023"
+    }
+}

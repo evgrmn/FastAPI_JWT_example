@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  shift_t:
+    container_name: shift_t
+    build:
+      context: .
+    command: "pytest -s -v -W ignore::DeprecationWarning"
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
