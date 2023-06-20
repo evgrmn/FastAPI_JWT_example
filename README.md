@@ -2,7 +2,7 @@
 
 ## What is inside
 
-- [ ] REST service for viewing the current salary of company employees
+- [ ] A simple example of a REST service for viewing the current salary of company employees
 
 - [ ] The database of company employees is located in the text file app/database/fake_users_db.json
 
