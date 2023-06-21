@@ -18,7 +18,7 @@ async def get_current_user(
 ) -> dict:
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Неверный логин или пароль или срок действия JWT-токена истек",
+        detail="Incorrect username or password or JWT token has expired",
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
@@ -43,7 +43,7 @@ async def authenticate_user(name: str, password: str):
     except Exception:
         raise HTTPException(
             status_code=401,
-            detail="Работник не найден",
+            detail="User not found",
         )
     if not pwd_context.verify(password, user["hashed_password"]):
         return False

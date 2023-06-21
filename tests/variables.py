@@ -1,4 +1,4 @@
 class Vars:
     token: str
-    username: str = "Ivan"
-    password: str = "ivansecret"
+    username: str = "Michael"
+    password: str = "michaelsecret"

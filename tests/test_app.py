@@ -13,7 +13,7 @@ pytestmark = pytest.mark.asyncio
 
 async def test_api(client):
     """
-    Проверям эндпоинт со списком всех работников
+    Check the endpoint with a list of all employees
     """
     r = await client.get(f"{url}user/all")
     assert r.status_code == 200, "wrong response"
@@ -21,8 +21,8 @@ async def test_api(client):
 
 async def test_not_authenticated(client):
     """
-    Проверям эндпоинт с информацией о работнике. Status_code должен быть 401
-    (Unauthorized Error), т.к. работник не авторизован
+    Checking the endpoint with information about the employee. Status_code 
+    should be 401 (Unauthorized Error), because employee is not authorized
     """
     r = await client.get(f"{url}user/me")
     assert r.status_code == 401, "wrong response"
@@ -30,8 +30,8 @@ async def test_not_authenticated(client):
 
 async def test_wrong_auth(client):
     """
-    Создаем токен для сотрудника с экпирацией через 0.5 секунды
-    с неправильным паролем
+    Create a token for an employee with 0.5 second expiration with 
+    wrong password
     """
     env.ACCESS_TOKEN_EXPIRE_MILLISECONDS = 500
     r = await client.post(
@@ -43,7 +43,7 @@ async def test_wrong_auth(client):
 
 async def test_create_token(client):
     """
-    Создаем токен для сотрудника с экпирацией через 0.5 секунды
+    Create a token for an employee with an expiration time of 0.5 seconds
     """
     env.ACCESS_TOKEN_EXPIRE_MILLISECONDS = 500
     r = await client.post(
@@ -56,7 +56,7 @@ async def test_create_token(client):
 
 async def test_user_authenticated(client):
     """
-    Проверям эндпоинт с информацией о работнике после создания токена для него
+    Checking the endpoint with information about the employee
     """
     r = await client.get(
         f"{url}user/me", headers={"Authorization": f"Bearer {var.token}"}
@@ -75,10 +75,10 @@ async def test_user_authenticated(client):
 
 async def test_token_expired(client):
     """
-    Проверям эндпоинт с информацией о работнике через 2 секунды после
-    создания токена. Status_code должен быть 401 (Unauthorized Error),
-    т.к. токен, который был создан в предыдущем тесте, уже с истекшим
-    сроком действия
+    Checking the endpoint with information about the employee 2 seconds 
+    after the creation of the token. Status_code should be 401 
+    (Unauthorized Error) because the token that was created in the 
+    previous test is already expired
     """
     time.sleep(2)
     r = await client.get(

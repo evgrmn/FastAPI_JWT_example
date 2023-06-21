@@ -1,18 +1,18 @@
 {
-    "Ivan": {
-        "username": "Ivan",
-        "full_name": "Иван Петров",
-        "email": "ivan@example.com",
-        "hashed_password": "$2b$12$Ho3vvFeR8ET/7W.cirjdUO2/13O4grByZ5ZFLwbyMlnoZdn1FUaVS",
-        "salary": "100000",
-        "salary_rise_date": "Ноябрь 2023"
+    "Michael": {
+        "username": "Michael",
+        "full_name": "Michael Smith",
+        "email": "michael@example.com",
+        "hashed_password": "$2b$12$.IT0dr0dc43nIabNuieFM.9JovJ8H/SNSQKxtchoajp6YxcL47Uri",
+        "salary": "3000",
+        "salary_rise_date": "November 2023"
     },
-    "Elena": {
-        "username": "Elena",
-        "full_name": "Елена Иванова",
-        "email": "elena@example.com",
-        "hashed_password": "$2b$12$2ofkSOWck.r.HS063lbNteU7gbEbsmvfmDX1723bekrXVnJUJrXHW",
-        "salary": "120000",
-        "salary_rise_date": "Октябрь 2023"
+    "Emily": {
+        "username": "Emily",
+        "full_name": "Emily Taylor",
+        "email": "emily@example.com",
+        "hashed_password": "$2b$12$SWXtr5CB6o16pfYD.A2.IuLocZ.VXjPzZbYbsrudIEwHoydD4aAwG",
+        "salary": "3100",
+        "salary_rise_date": "October 2023"
     }
 }

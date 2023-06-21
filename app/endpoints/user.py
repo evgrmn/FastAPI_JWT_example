@@ -11,11 +11,11 @@ router = APIRouter()
     "/all",
     response_model=list[User],
     status_code=200,
-    summary="Список работников",
+    summary="A list of Employees",
 )
 async def get_employees() -> list:
     """
-    Список работников
+    A list of Employees
     """
 
     return list(users.data.values())
@@ -25,17 +25,17 @@ async def get_employees() -> list:
     "/me",
     response_model=Salary,
     status_code=200,
-    summary="Информация о зарплате работника",
+    summary="Employee salary information",
 )
 async def employee(
     user: dict = Depends(_control.get_current_user),
 ) -> Salary:
     """
-    Информация о зарплате работника
+    Employee salary information
     """
     try:
         employee = users.data[user["username"]]
     except Exception:
-        raise HTTPException(status_code=404, detail="Работник не найден")
+        raise HTTPException(status_code=404, detail="Employee not found")
 
     return Salary.parse_obj(employee)

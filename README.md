@@ -42,61 +42,17 @@
      - Michael michaelsecret
      - Emily emilysecret
 
+## Launch
 
+Download files
 
+### Running in a Docker container
 
+*Docker and docker-compose packages must be installed*
 
-REST-сервис просмотра текущей зарплаты сотрудников и даты следующего повышения. Сотрудники могут пользоваться сервисом только с помощью своего логина и пароля. Сервис информирует сотрудников об их зарплате и дате следующего повышения зарплаты. Для реализации сервиса должен быть использован FastAPI.
+Run the program `docker-compose up --build`
 
-### Ключевые особенности
-
-- [ ] Поскольку требования по использованию реляционных баз данных не определены, для хранения информации о сотрудниках используется простой текстовый файл в формате json
-
-- [ ] Запуск сервиса в изолированном контейнере Docker
-
-- [ ] Использование менеджера зависимостей Poetry
-
-- [ ] Технология аутентификации в клиент-серверных приложениях JSON Web Token (JWT)
-
-- [ ] Автотесты Pytest
-
-- [ ] Программный код основан на официальной документации FastAPI [OAuth2 with Password (and hashing), Bearer with JWT tokens](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
-
-## Реализация
-
-- [ ] API имеет три эндпоинта:
-    - /api/v1/auth/token - генерирует токен для сотрудника при входе по паролю
-    - /api/v1/all - просмотр списка всех сотрудников
-    - /api/v1/me - просмотр зарплаты и даты повышения сотрудником по паролю
-
-- [ ] файл .env хранит срок жизни токена в миллисекундах и секретный ключ JWT
-
-- [ ] main.py - запуск API. (локальный запуск *uvicorn main:app --reload*)
-
-- [ ] pyproject.toml - файл с зависимостями Poetry
-
-- [ ] файлы API находятся в папке app
-    - config - загрузка переменных окружения
-    - control - функции бизнес-логики
-    - database - загрузка файла базы данных
-    - endpoints - вызов сервисов API
-    - schemas - модели Pydentic для валидации переменных
-
-- [ ] Логины и пароли:
-    - Ivan ivansecret
-    - Elena elenasecret
-
-## Запуск
-
-Скачать файлы из репозитория
-
-### Запуск в контейнере Docker
-
-*Для запуска должны быть установлены пакеты docker и docker-compose*
-
-Команда запуска `docker-compose up --build`
-
-*Если образ python:3.10-slim не скачивается автоматически, то использовать команду `docker pull python:3.10-slim`*
+*If the python:3.10-slim image does not download automatically, then first download the image `docker pull python:3.10-slim`*
 
 После запуска, API доступно по адресу `http://localhost:8000/docs`
 
