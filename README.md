@@ -67,7 +67,7 @@ The application has been tested on Linux Debian 11 and Linux Ubuntu 20.04 operat
 
 *Installing dependencies with Poetry [instruction](https://python-poetry.org/docs/)*
 
-*Change dependency in pyproject.toml on line 9 to your python version*
+If necessary, change the dependency in *pyproject.toml* on line 9 to your version of Python
 
 Install dependencies `poetry install`
 
