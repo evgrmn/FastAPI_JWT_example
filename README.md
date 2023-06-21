@@ -2,9 +2,9 @@
 
 ## What is inside
 
-- [ ] A simple example of a REST service for viewing the current salary of company employees
+- [ ] A simple example of a service for viewing the current salary of company employees
 
-- [ ] The database of company employees is located in the text file app/database/fake_users_db.json
+- [ ] The database of company employees is located in the text file *app/database/fake_users_db.json*
 
 - [ ] Viewing information from the database is possible with a password
 
@@ -41,6 +41,11 @@
 - [ ] Logins and passwords:
      - Michael michaelsecret
      - Emily emilysecret
+
+     | First Header  | Second Header |
+     | ------------- | ------------- |
+     | Content Cell  | Content Cell  |
+     | Content Cell  | Content Cell  |
 
 ## Launch
 
