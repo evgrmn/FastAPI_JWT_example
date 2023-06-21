@@ -39,9 +39,6 @@
      - schemas - Pydentic models for variable validation
 
 - [ ] Logins and passwords:
-     - Michael michaelsecret
-     - Emily emilysecret
-
      | Login  | Password |
      | ------------- | ------------- |
      | Michael  | michaelsecret  |
