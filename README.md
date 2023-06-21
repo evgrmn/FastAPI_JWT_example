@@ -52,53 +52,53 @@ Download files
 
 Run the program `docker-compose up --build`
 
-*If the python:3.10-slim image does not download automatically, then first download the image `docker pull python:3.10-slim`*
+*If the python:3.10-slim image did not download automatically, first download the image `docker pull python:3.10-slim`*
 
-После запуска, API доступно по адресу `http://localhost:8000/docs`
+Once launched, the API is available at `http://localhost:8000/docs`
 
-### Локальный запуск
+### Local launch
 
-Работоспособность ПО проверена в операционных системах Linux Debian 11 и Linux Ubuntu 20.04
+The application has been tested on Linux Debian 11 and Linux Ubuntu 20.04 operating systems
 
-#### Установка зависимостей с помощью Poetry
+#### Installing dependencies with Poetry
 
-*Для запуска должен быть установлен пакет Poetry [инструкция](https://python-poetry.org/docs/)*
+*Installing dependencies with Poetry [instruction](https://python-poetry.org/docs/)*
 
-*Если у вас установлен Python3.9 - изменить зависимость в pyproject.toml на вашу версию python*
+*Change dependency in pyproject.toml on line 9 to your python version*
 
-Для установки зависимостей выполнить команду `poetry install`
+Install dependencies `poetry install`
 
-Для запуска виртуального окружения выполнить команду `poetry shell`
+To start the virtual environment, run the command `poetry shell`
 
-Запустить приложение `uvicorn main:app --relaod`
+Application launch `uvicorn main:app --relaod`
 
-После запуска, API доступно по адресу `http://localhost:8000/docs`
+Once launched, the API is available at `http://localhost:8000/docs`
 
-#### Другой способ подготовки локального запуска - это установка зависимостей с помощью pip
+#### Installing dependencies with pip
 
-Рекомендуется использовать виртуальное окружение venv. Для того чтобы его активировать, выполните команду `python -m venv venv` и затем `source venv/bin/activate` 
+It is recommended to use a virtual environment. To activate it, run `python -m venv venv` and `source venv/bin/activate`
 
-Установить зависимости в виртуальное окружение `pip install fastapi httpx passlib pytest_asyncio python-dotenv python-jose python-multipart pytest uvicorn`
+Install dependencies in the virtual environment `pip install fastapi httpx passlib pytest_asyncio python-dotenv python-jose python-multipart pytest uvicorn`
 
-Возможно, потребуется перезапустить виртуальное окружение `deactivate && source venv/bin/activate`
+You may need to restart the virtual environment `deactivate && source venv/bin/activate`
 
-Выполнить команду `uvicorn main:app --reload`
+Application launch `uvicorn main:app --relaod`
 
-После запуска, API доступно по адресу `http://localhost:8000/docs`
+Once launched, the API is available at `http://localhost:8000/docs`
 
-## Тестирование
+## Testing
 
-Файл конфигурации и файл с тестами находятся в папке tests. Тесты и комментарии к тестам в файле test_app.py
+The configuration file and the test file are located in the 'tests' folder.
 
-### Запуск в контейнере docker
+### Running in a docker container
 
-*Для запуска должны быть установлены пакеты docker и docker-compose*
+*Docker and docker-compose packages must be installed*
 
-Выполнить команду `docker-compose -f docker-compose.tests.yml up --build`
+Run command `docker-compose -f docker-compose.tests.yml up --build`
 
-### Локально
+### Locally
 
-Зависимости должны быть установлены по инструкции из раздела **Локальный запуск**
+Install dependencies as mentioned in **Local launch**
 
-Запустить тесты командой `pytest`
+Run tests `pytest`
 
