@@ -1,5 +1,5 @@
 # JWT authentication example for FastAPI with Pytest testing
-![](https://badgen.net/badge/Python/3.10/blue) ![](https://badgen.net/badge/FastAPI/0.95.2/gray) ![](https://badgen.net/badge/Pytest/7.2.1/blue) ![](https://badgen.net/badge/Pydantic/1.10.8/gray)
+![](https://badgen.net/badge/Python/3.10/blue) ![](https://badgen.net/badge/FastAPI/0.95.2/gray) ![](https://badgen.net/badge/Pytest/7.2.1/blue) ![](https://badgen.net/badge/Pydantic/1.10.8/gray) ![](https://badgen.net/badge/Poetry/0.1.0/blue)
 
 ## What is inside
 
