@@ -42,10 +42,10 @@
      - Michael michaelsecret
      - Emily emilysecret
 
-     | First Header  | Second Header |
+     | Login  | Password |
      | ------------- | ------------- |
-     | Content Cell  | Content Cell  |
-     | Content Cell  | Content Cell  |
+     | Michael  | michaelsecret  |
+     | Emily  | emilysecret  |
 
 ## Launch
 
