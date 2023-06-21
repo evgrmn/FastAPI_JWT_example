@@ -34,7 +34,7 @@
 
 - [ ] API files are in app folder
      - config - load environment variables
-     - control - business logic functions
+     - control - functions
      - database - load database file
      - endpoints - calling API services
      - schemas - Pydentic models for variable validation
